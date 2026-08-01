@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elian Ross - Product Designer</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* CSS Variables & Resets */
+    :root {
+      --bg-color: #dbe5d4;
+      --accent-green: #3d5a32;
+      --dark-green: #24381e;
+      --pill-bg: #e6ede0;
+      --text-main: #1f2f18;
+      --text-muted: #56684e;
+      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-pill: 0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Background Glows & Shapes */
+    .bg-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(219,229,212,0) 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Decorative Floating Spheres (CSS representation of the 3D shapes) */
+    .decor-sphere {
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c986f, #3b5631);
+      box-shadow: inset -10px -10px 20px rgba(0,0,0,0.3), 10px 15px 25px rgba(0,0,0,0.15);
+      z-index: 1;
+    }
+    .sphere-top-left { width: 120px; height: 120px; top: -30px; left: 15%; }
+    .sphere-top-right { width: 160px; height: 160px; top: -40px; right: 8%; background: linear-gradient(135deg, #537346, #24381e); }
+    .sphere-right-beige { width: 90px; height: 90px; top: 120px; right: 3%; background: linear-gradient(135deg, #e3dac9, #c2b59b); }
+    .sphere-mid-left { width: 45px; height: 45px; top: 45%; left: 29%; }
+    .sphere-mid-right { width: 30px; height: 30px; bottom: 30%; right: 21%; background: linear-gradient(135deg, #e3dac9, #c2b59b); }
+
+    /* Header Navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--dark-green);
+      text-decoration: none;
+    }
+
+    .award-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .award-badge i {
+      font-size: 1.1rem;
+      color: var(--dark-green);
+    }
+
+    .menu-btn {
+      width: 45px;
+      height: 45px;
+      background: var(--pill-bg);
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      box-shadow: var(--shadow-pill);
+      transition: transform 0.2s ease;
+    }
+
+    .menu-btn span {
+      width: 18px;
+      height: 2px;
+      background-color: var(--dark-green);
+      border-radius: 2px;
+    }
+
+    .menu-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Main Hero Section */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      position: relative;
+      z-index: 5;
+      padding: 0 2rem;
+    }
+
+    /* Heading Styling */
+    .hero-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      margin-top: -2rem;
+    }
+
+    .hero-title h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: var(--dark-green);
+      line-height: 1.1;
+    }
+
+    .hero-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--dark-green);
+      line-height: 1.1;
+    }
+
+    /* Floating Content Wrappers */
+    .hero-content {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    /* Left Side: Availability Badge & Testimonial */
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+      z-index: 6;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(230, 237, 224, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      box-shadow: var(--shadow-pill);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--dark-green);
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      background-color: #6bb343;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #6bb343;
+    }
+
+    .social-proof {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .avatar-group {
+      display: flex;
+    }
+
+    .avatar-group img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid var(--bg-color);
+      margin-left: -10px;
+      object-fit: cover;
+    }
+
+    .avatar-group img:first-child {
+      margin-left: 0;
+    }
+
+    .proof-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+      font-weight: 500;
+    }
+
+    /* Center: Person Portrait */
+    .portrait-container {
+      position: absolute;
+      left: 50%;
+      bottom: -40px;
+      transform: translateX(-50%);
+      z-index: 4;
+      width: 420px;
+      height: auto;
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(100%) contrast(1.05); /* Black and white photo effect */
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+    }
+
+    /* Right Side: Bio & CTA */
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4rem;
+      max-width: 280px;
+      z-index: 6;
+      text-align: right;
+    }
+
+    .bio-text {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background-color: var(--dark-green);
+      color: #ffffff;
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 20px rgba(36, 56, 30, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--accent-green);
+      transform: translateY(-2px);
+    }
+
+    .cta-button i {
+      font-size: 0.8rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      header { padding: 2rem; }
+      .hero-title h2 { font-size: 2.8rem; }
+      .hero-title h1 { font-size: 4rem; }
+      .portrait-container { width: 350px; }
+      .hero-left, .hero-right { gap: 3rem; }
+    }
+
+    @media (max-width: 768px) {
+      body { overflow-y: auto; }
+      header { padding: 1.5rem; }
+      .award-badge { display: none; }
+      .hero-title h2 { font-size: 2.2rem; }
+      .hero-title h1 { font-size: 3.2rem; }
+      
+      .hero-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+      
+      .portrait-container {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 300px;
+        margin-top: 1rem;
+      }
+
+      .hero-left, .hero-right {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        gap: 1.5rem;
+      }
+
+      .decor-sphere { display: none; } /* Hide heavy decoration elements on small mobile */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Light Glow -->
+  <div class="bg-glow"></div>
+
+  <!-- Decorative 3D Spheres -->
+  <div class="decor-sphere sphere-top-left"></div>
+  <div class="decor-sphere sphere-top-right"></div>
+  <div class="decor-sphere sphere-right-beige"></div>
+  <div class="decor-sphere sphere-mid-left"></div>
+  <div class="decor-sphere sphere-mid-right"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <a href="#" class="logo">Elian Ross</a>
+    
+    <div class="award-badge">
+      <i class="fa-solid font-award"></i>
+      <span>Awwwards — Design Website Of The Day 2025</span>
+    </div>
+
+    <button class="menu-btn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <div class="hero-title">
+      <h2>Hi I'm Elian</h2>
+      <h1>Product Designer</h1>
+    </div>
+
+    <div class="hero-content">
+      <!-- Left Column -->
+      <div class="hero-left">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Available for new opportunities</span>
+        </div>
+
+        <div class="social-proof">
+          <div class="avatar-group">
+            <!-- <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Client Avatar">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Client Avatar">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Client Avatar"> -->
+          </div>
+          <div class="proof-text">
+            Trusted by 50+ clients<br>worldwide
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Image -->
+      <div class="portrait-container">
+        <!-- Placeholder woman image cutout matching the original composition -->
+        <img class="portrait-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Elian Ross Portrait">
+      </div>
+
+      <!-- Right Column -->
+      <div class="hero-right">
+        <p class="bio-text">
+          Passionate about creating creative digital experiences that connect users with brands.
+        </p>
+
+        <a href="#contact" class="cta-button">
+          <i class="fa-solid fa-arrow-right"></i>
+          <span>Get In Touch</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
