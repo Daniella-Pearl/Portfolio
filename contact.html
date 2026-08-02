@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Collaborate — Nassuuna Pearl Daniella</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="contact.css" />
+<link rel="stylesheet" href="mobile.css" />
+
+</head>
+<body>
+
+  <div class="viewport-card">
+    
+    <!-- Header Navigation -->
+    <header>
+      <a href="index.html" class="brand-logo" target="_blank">DANIELLA</a>
+      
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span class="status-text">Available for Work</span>
+      </div>
+
+      <nav>
+        <a href="index.html" target="_blank">HOME</a>
+        <a href="about.html" target="_blank">ABOUT</a>
+        <a href="skills.html" target="_blank">SKILLS</a>
+        <a href="projects.html" target="_blank">WORK</a>
+        <a href="achievements.html" target="_blank">ACHIEVEMENTS</a>
+        <a href="contact.html" class="active" target="_blank">CONTACT</a>
+      </nav>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="hero-section">
+      <span class="section-tag">GET IN TOUCH</span>
+      <h1 class="main-title">Let's Work Together</h1>
+      <p class="hero-intro">
+        Have a project in mind, an exciting role, or an open-source collaboration? Feel free to reach out using any of the methods below.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Two Column Main Layout -->
+    <div class="contact-layout-grid">
+
+      <!-- Left Column: Info Cards & Availability -->
+      <div class="contact-info-col">
+        
+        <h2 class="column-heading">Contact Details</h2>
+
+        <div class="info-cards-stack">
+          
+          <a href="mailto:pearldaniellu9@gmail.com" class="info-card" target="_blank">
+            <div class="info-card-icon"><i class="fa-regular fa-envelope"></i></div>
+            <div class="info-card-text">
+              <span class="info-label">Email</span>
+              <span class="info-value">pearldaniellu9@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="tel:+256770442566" class="info-card" target="_blank">
+            <div class="info-card-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-card-text">
+              <span class="info-label">Phone</span>
+              <span class="info-value">+256 770 442 566</span>
+            </div>
+          </a>
+
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-card-text">
+              <span class="info-label">Location</span>
+              <span class="info-value">Kampala, Uganda (Available Remote)</span>
+            </div>
+          </div>
+
+          <a href="https://www.linkedin.com/in/pearl-daniella/" target="_blank" rel="noopener noreferrer" class="info-card">
+            <div class="info-card-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="info-card-text">
+              <span class="info-label">LinkedIn</span>
+              <span class="info-value">linkedin.com/in/daniella</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Daniella-Pearl" target="_blank" rel="noopener noreferrer" class="info-card">
+            <div class="info-card-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="info-card-text">
+              <span class="info-label">GitHub</span>
+              <span class="info-value">github.com/Daniella-Pearl</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Availability & Hours Box -->
+        <div class="availability-card">
+          <h3><i class="fa-solid fa-circle-check status-icon"></i> Current Availability</h3>
+          <ul class="availability-list">
+            <li><i class="fa-solid fa-check"></i> Full-Time Opportunities</li>
+            <li><i class="fa-solid fa-check"></i> Software Internships</li>
+            <li><i class="fa-solid fa-check"></i> Freelance Projects</li>
+            <li><i class="fa-solid fa-check"></i> Open-Source Collaborations</li>
+          </ul>
+
+          <div class="hours-box">
+            <h4><i class="fa-regular fa-clock"></i> Working Hours</h4>
+            <p>Monday – Friday: 8:00 AM – 6:00 PM (EAT)</p>
+            <span class="response-note">⚡ Usually replies within 24 hours.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive Form -->
+      <div class="contact-form-col">
+        
+        <h2 class="column-heading">Send Me a Message</h2>
+
+        <form class="contact-form" action="#" method="POST">
+          
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Hi Daniella, I'd like to discuss..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-solid submit-btn">
+            <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Frequently Asked Questions -->
+    <section class="section-block">
+      <h2 class="section-heading centered"><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        
+        <div class="faq-card">
+          <h4>Do you build full responsive web applications?</h4>
+          <p>Yes, I engineer accessible, high-performance web applications using modern frontend tools (React, Tailwind) and solid backend pipelines (Node.js, Express, MongoDB, SQL).</p>
+        </div>
+
+        <div class="faq-card">
+          <h4>Are you available for remote work?</h4>
+          <p>Absolutely. I am based in Kampala, Uganda, and comfortably collaborate across international time zones using standard remote tools (Git, GitHub, Docker, Slack).</p>
+        </div>
+
+        <div class="faq-card">
+          <h4>Do you develop mobile applications?</h4>
+          <p>Yes! I am actively building cross-platform applications with React Native alongside native Android development using Kotlin.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Social Media Bar & Bottom CTA -->
+    <section class="cta-section">
+      <h2>Have an idea? Let's turn it into reality.</h2>
+      <p>I'm always excited to work on new projects, collaborate with amazing teams, and solve complex problems through code.</p>
+
+      <div class="social-links-bar">
+        <a href="https://github.com/Daniella-Pearl" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:pearl@example.com" aria-label="Email" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="mailto:pearl@example.com" class="btn btn-solid" target="_blank">Email Me Directly</a>
+        <a href="#" class="btn btn-outline" target="_blank"><i class="fa-solid fa-download"></i> Download Resume</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Thank you for visiting my portfolio. Looking forward to hearing from you.</p>
+      <p class="copyright">© 2026 Nassuuna Pearl Daniella. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

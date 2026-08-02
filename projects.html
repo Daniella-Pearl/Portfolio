@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Case Studies — Nassuuna Pearl Daniella</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="projects.css" />
+<link rel="stylesheet" href="mobile.css" />
+
+</head>
+<body>
+
+  <div class="viewport-card">
+    
+    <!-- Header Navigation -->
+    <header>
+      <a href="index.html" class="brand-logo" target="_blank">DANIELLA</a>
+      
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span class="status-text">Available for Work</span>
+      </div>
+
+      <nav>
+        <a href="index.html" target="_blank">HOME</a>
+        <a href="about.html" target="_blank">ABOUT</a>
+        <a href="skills.html" target="_blank">SKILLS</a>
+        <a href="projects.html" class="active" target="_blank">PROJECTS</a>
+        <a href="achievements.html" target="_blank">ACHIEVEMENTS</a>
+        <a href="contact.html" target="_blank">CONTACT</a>
+      </nav>
+    </header>
+
+    <!-- Page Header Section -->
+    <section class="hero-section">
+      <span class="section-tag">PORTFOLIO</span>
+      <h1 class="main-title">Featured Projects</h1>
+      <p class="hero-intro">
+        A collection of projects showcasing my skills in software engineering, full-stack web development, dynamic user interfaces, and technical problem-solving.
+      </p>
+    </section>
+
+    <!-- Project Filter Buttons -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Projects Grid Section -->
+    <section class="projects-section">
+      <div class="projects-grid">
+
+        <!-- Project 1: NyondoStock ERP -->
+        <article class="project-card" data-category="fullstack">
+          <div class="card-image-wrapper">
+            <div class="image-placeholder">
+              <img src="./LandingPage.png" alt="NyondoStock ERP Demo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" target="_blank" />
+              <span>NyondoStock ERP Demo</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h2 class="project-title">NyondoStock ERP</h2>
+            <p class="project-desc">
+              A full-stack inventory and sales management system designed to help businesses manage stock levels, track customer transactions, and generate real-time financial reports.
+            </p>
+
+            <div class="tech-stack-container">
+              <span class="tech-badge">Figma</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">MongoDB</span>
+            </div>
+
+            <ul class="features-list">
+              <li><i class="fa-solid fa-check"></i> User Authentication & Role Management</li>
+              <li><i class="fa-solid fa-check"></i> Sales & Revenue Tracking</li>
+              <li><i class="fa-solid fa-check"></i> Dynamic Inventory Updates</li>
+              <li><i class="fa-solid fa-check"></i> Interactive Reports Dashboard</li>
+            </ul>
+
+            <div class="card-buttons">
+              <a href="https://deployednyondo.onrender.com" class="btn btn-outline" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/Daniella-Pearl/NyondoStockFinalProject-Presented-" class="btn btn-solid" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Async Ledger ERP -->
+        <article class="project-card" data-category="fullstack">
+          <div class="card-image-wrapper">
+            <div class="image-placeholder">
+              <img src="./ellahFashions.png" alt="Ellah Fashions Demo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" target="_blank" />
+              <span>Ellah Fashions</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h2 class="project-title">Ellah Fashions</h2>
+            <p class="project-desc">
+              An intelligent website for e-commerce shopping, with an auto email to both the buyer informing them of their purchases and to the admin to alert them of the order made.
+                       </p>
+
+            <div class="tech-stack-container">
+              <span class="tech-badge">HTML, CSS</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">MongoDB Atlas</span>
+              <span class="tech-badge">Javascript</span>
+            </div>
+
+            <ul class="features-list">
+              <li><i class="fa-solid fa-check"></i> Automated Email Notifications</li>
+              <li><i class="fa-solid fa-check"></i> Product Catalog Management</li>
+              <li><i class="fa-solid fa-check"></i> Secure User Authentication</li>
+              <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+            </ul>
+
+            <div class="card-buttons">
+              <a href="https://e-commerce-app-b4l4.onrender.com/" class="btn btn-outline" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/Daniella-Pearl/E-Commerce-App" class="btn btn-solid" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: DeeNoop Digital Magazine -->
+        <article class="project-card" data-category="backend">
+          <div class="card-image-wrapper">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-newspaper project-icon"></i>
+              <span>DeeNoop Publishing Platform</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h2 class="project-title">DeeNoop Digital Magazine</h2>
+            <p class="project-desc">
+              An online publication web app built with express routing and clean content API structures for fast publishing, editorial workflows, and media delivery.
+            </p>
+
+            <div class="tech-stack-container">
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">MongoDB</span>
+              <span class="tech-badge">REST API</span>
+            </div>
+
+            <ul class="features-list">
+              <li><i class="fa-solid fa-check"></i> REST API Article Integration</li>
+              <li><i class="fa-solid fa-check"></i> Category & Tag Indexing</li>
+              <li><i class="fa-solid fa-check"></i> Responsive Content Rendering</li>
+              <li><i class="fa-solid fa-check"></i> Fast Database Querying</li>
+            </ul>
+
+            <div class="card-buttons">
+              <a href="#" class="btn btn-outline" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="#" class="btn btn-solid" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: BloomDaizel Website -->
+        <article class="project-card" data-category="frontend">
+          <div class="card-image-wrapper">
+            <div class="image-placeholder">
+              <img src="./daizel.png" alt="BloomDaizel Agency UI" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" target="_blank" />
+              <span>BloomDaizel Agency UI</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h2 class="project-title">BloomDaizel Website</h2>
+            <p class="project-desc">
+              A high-converting digital agency landing experience emphasizing modular UI layout structures, performance optimizations, and modern aesthetics.
+            </p>
+
+            <div class="tech-stack-container">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Figma</span>
+            </div>
+
+            <ul class="features-list">
+              <li><i class="fa-solid fa-check"></i> Fluid Mobile Responsive Layouts</li>
+              <li><i class="fa-solid fa-check"></i> Clean UI Design System</li>
+              <li><i class="fa-solid fa-check"></i> Smooth Interactive Elements</li>
+              <li><i class="fa-solid fa-check"></i> Optimized Load Performance</li>
+            </ul>
+
+            <div class="card-buttons">
+              <a href="https://daniella-pearl.github.io/BloomDaizel-Company/" class="btn btn-outline" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/Daniella-Pearl/BloomDaizel-Company" class="btn btn-solid" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Developer Statistics Section -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Technologies Mastered</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Hours of Engineering</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">Always</span>
+          <span class="stat-label">Learning & Growing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="cta-section" id="contact">
+      <h2>Interested in working together?</h2>
+      <p>Let's build something scalable, functional, and amazing.</p>
+      <a href="contact.html" class="btn btn-solid cta-btn" target="_blank">Contact Me</a>
+    </section>
+
+  </div>
+
+  <!-- Interactive JavaScript for Category Filtering -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          projectCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

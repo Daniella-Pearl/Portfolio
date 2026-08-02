@@ -1,421 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elian Ross - Product Designer</title>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Nassuuna Pearl Daniella</title>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    /* CSS Variables & Resets */
-    :root {
-      --bg-color: #dbe5d4;
-      --accent-green: #3d5a32;
-      --dark-green: #24381e;
-      --pill-bg: #e6ede0;
-      --text-main: #1f2f18;
-      --text-muted: #56684e;
-      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
-      --shadow-pill: 0 4px 15px rgba(0, 0, 0, 0.06);
-    }
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <link rel="stylesheet" href="about.css" />
+<link rel="stylesheet" href="mobile.css" />
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    /* Ambient Background Glows & Shapes */
-    .bg-glow {
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(219,229,212,0) 70%);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    /* Decorative Floating Spheres (CSS representation of the 3D shapes) */
-    .decor-sphere {
-      position: absolute;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #7c986f, #3b5631);
-      box-shadow: inset -10px -10px 20px rgba(0,0,0,0.3), 10px 15px 25px rgba(0,0,0,0.15);
-      z-index: 1;
-    }
-    .sphere-top-left { width: 120px; height: 120px; top: -30px; left: 15%; }
-    .sphere-top-right { width: 160px; height: 160px; top: -40px; right: 8%; background: linear-gradient(135deg, #537346, #24381e); }
-    .sphere-right-beige { width: 90px; height: 90px; top: 120px; right: 3%; background: linear-gradient(135deg, #e3dac9, #c2b59b); }
-    .sphere-mid-left { width: 45px; height: 45px; top: 45%; left: 29%; }
-    .sphere-mid-right { width: 30px; height: 30px; bottom: 30%; right: 21%; background: linear-gradient(135deg, #e3dac9, #c2b59b); }
-
-    /* Header Navigation */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2.5rem 5rem;
-      position: relative;
-      z-index: 10;
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--dark-green);
-      text-decoration: none;
-    }
-
-    .award-badge {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      letter-spacing: 0.5px;
-    }
-
-    .award-badge i {
-      font-size: 1.1rem;
-      color: var(--dark-green);
-    }
-
-    .menu-btn {
-      width: 45px;
-      height: 45px;
-      background: var(--pill-bg);
-      border: none;
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
-      cursor: pointer;
-      box-shadow: var(--shadow-pill);
-      transition: transform 0.2s ease;
-    }
-
-    .menu-btn span {
-      width: 18px;
-      height: 2px;
-      background-color: var(--dark-green);
-      border-radius: 2px;
-    }
-
-    .menu-btn:hover {
-      transform: scale(1.05);
-    }
-
-    /* Main Hero Section */
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex-grow: 1;
-      position: relative;
-      z-index: 5;
-      padding: 0 2rem;
-    }
-
-    /* Heading Styling */
-    .hero-title {
-      text-align: center;
-      margin-bottom: 2rem;
-      margin-top: -2rem;
-    }
-
-    .hero-title h2 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 3.5rem;
-      font-weight: 600;
-      color: var(--dark-green);
-      line-height: 1.1;
-    }
-
-    .hero-title h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 5rem;
-      font-weight: 500;
-      font-style: italic;
-      color: var(--dark-green);
-      line-height: 1.1;
-    }
-
-    /* Floating Content Wrappers */
-    .hero-content {
-      width: 100%;
-      max-width: 1200px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      margin-top: 1rem;
-    }
-
-    /* Left Side: Availability Badge & Testimonial */
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      gap: 8rem;
-      z-index: 6;
-    }
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: rgba(230, 237, 224, 0.85);
-      backdrop-filter: blur(10px);
-      padding: 0.6rem 1.4rem;
-      border-radius: 50px;
-      box-shadow: var(--shadow-pill);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--dark-green);
-    }
-
-    .status-dot {
-      width: 10px;
-      height: 10px;
-      background-color: #6bb343;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #6bb343;
-    }
-
-    .social-proof {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .avatar-group {
-      display: flex;
-    }
-
-    .avatar-group img {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      border: 2px solid var(--bg-color);
-      margin-left: -10px;
-      object-fit: cover;
-    }
-
-    .avatar-group img:first-child {
-      margin-left: 0;
-    }
-
-    .proof-text {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      line-height: 1.3;
-      font-weight: 500;
-    }
-
-    /* Center: Person Portrait */
-    .portrait-container {
-      position: absolute;
-      left: 50%;
-      bottom: -40px;
-      transform: translateX(-50%);
-      z-index: 4;
-      width: 420px;
-      height: auto;
-    }
-
-    .portrait-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: grayscale(100%) contrast(1.05); /* Black and white photo effect */
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
-      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
-    }
-
-    /* Right Side: Bio & CTA */
-    .hero-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 4rem;
-      max-width: 280px;
-      z-index: 6;
-      text-align: right;
-    }
-
-    .bio-text {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      line-height: 1.5;
-      font-weight: 500;
-    }
-
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      background-color: var(--dark-green);
-      color: #ffffff;
-      padding: 0.9rem 1.8rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      box-shadow: 0 10px 20px rgba(36, 56, 30, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: var(--accent-green);
-      transform: translateY(-2px);
-    }
-
-    .cta-button i {
-      font-size: 0.8rem;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 1024px) {
-      header { padding: 2rem; }
-      .hero-title h2 { font-size: 2.8rem; }
-      .hero-title h1 { font-size: 4rem; }
-      .portrait-container { width: 350px; }
-      .hero-left, .hero-right { gap: 3rem; }
-    }
-
-    @media (max-width: 768px) {
-      body { overflow-y: auto; }
-      header { padding: 1.5rem; }
-      .award-badge { display: none; }
-      .hero-title h2 { font-size: 2.2rem; }
-      .hero-title h1 { font-size: 3.2rem; }
-      
-      .hero-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-      }
-      
-      .portrait-container {
-        position: relative;
-        left: 0;
-        transform: none;
-        width: 300px;
-        margin-top: 1rem;
-      }
-
-      .hero-left, .hero-right {
-        align-items: center;
-        text-align: center;
-        max-width: 100%;
-        gap: 1.5rem;
-      }
-
-      .decor-sphere { display: none; } /* Hide heavy decoration elements on small mobile */
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Ambient Light Glow -->
-  <div class="bg-glow"></div>
-
-  <!-- Decorative 3D Spheres -->
-  <div class="decor-sphere sphere-top-left"></div>
-  <div class="decor-sphere sphere-top-right"></div>
-  <div class="decor-sphere sphere-right-beige"></div>
-  <div class="decor-sphere sphere-mid-left"></div>
-  <div class="decor-sphere sphere-mid-right"></div>
-
-  <!-- Header Navigation -->
-  <header>
-    <a href="#" class="logo">Elian Ross</a>
+  <div class="viewport-card">
     
-    <div class="award-badge">
-      <i class="fa-solid font-award"></i>
-      <span>Awwwards — Design Website Of The Day 2025</span>
-    </div>
-
-    <button class="menu-btn" aria-label="Toggle Menu">
-      <span></span>
-      <span></span>
-    </button>
-  </header>
-
-  <!-- Hero Section -->
-  <main>
-    <div class="hero-title">
-      <h2>Hi I'm Elian</h2>
-      <h1>Product Designer</h1>
-    </div>
-
-    <div class="hero-content">
-      <!-- Left Column -->
-      <div class="hero-left">
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          <span>Available for new opportunities</span>
-        </div>
-
-        <div class="social-proof">
-          <div class="avatar-group">
-            <!-- <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Client Avatar">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Client Avatar">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Client Avatar"> -->
-          </div>
-          <div class="proof-text">
-            Trusted by 50+ clients<br>worldwide
-          </div>
-        </div>
+    <!-- Header Navigation -->
+    <header>
+      <a href="index.html" class="brand-logo" target="_blank">DANIELLA</a>
+      
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span class="status-text">Available for Work</span>
       </div>
 
-      <!-- Center Image -->
-      <div class="portrait-container">
-        <!-- Placeholder woman image cutout matching the original composition -->
-        <img class="portrait-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Elian Ross Portrait">
-      </div>
+      <nav>
+        <a href="index.html" target="_blank">HOME</a>
+        <a href="about.html" class="active" target="_blank">ABOUT</a>
+        <a href="skills.html" target="_blank">SKILLS</a>
+        <a href="projects.html" target="_blank">PROJECTS</a>
+        <a href="achievements.html" target="_blank">ACHIEVEMENTS</a>
+        <a href="contacts.html" target="_blank">CONTACT</a>
+      </nav>
+    </header>
 
-      <!-- Right Column -->
-      <div class="hero-right">
-        <p class="bio-text">
-          Passionate about creating creative digital experiences that connect users with brands.
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
+      <span class="section-tag">ABOUT ME</span>
+      <h1 class="main-title">Passionate Software Engineer &<br>Full-Stack Developer from Uganda</h1>
+      <p class="hero-intro">
+        I'm Daniella, a software engineer and mobile application developer with a passion for creating clean, scalable, and user-friendly digital solutions. I enjoy turning ideas into real products through thoughtful design and modern technologies.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 2. Photo + Story -->
+    <section class="story-grid">
+      <div class="story-frame">
+        <img class="story-img" src="./Ellah.png" alt="Nassuuna Pearl Daniella" />
+      </div>
+      <div class="story-content">
+        <h2 class="section-heading">My Story</h2>
+        <p class="story-paragraph">
+          My journey into software engineering began with a curiosity about how complex websites and applications are constructed behind the scenes. Since then, I've dedicated myself to learning modern web and mobile architectures, solving real-world challenges, and continuously refining my skill set through hands-on technical projects and professional training.
         </p>
-
-        <a href="#contact" class="cta-button">
-          <i class="fa-solid fa-arrow-right"></i>
-          <span>Get In Touch</span>
-        </a>
+        <p class="story-paragraph">
+          I believe technology should simplify everyday life and create meaningful economic opportunities for people. Whether building robust backend infrastructure or crafting intuitive interfaces, I strive for execution that balances usability with reliable performance.
+        </p>
       </div>
-    </div>
-  </main>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 3. Skills Categories -->
+    <section class="section-block">
+      <h2 class="section-heading centered">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-code"></i> Frontend</h3>
+          <div class="badge-group">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">React</span>
+            <span class="badge">Tailwind CSS</span>
+            <span class="badge">Vue.js</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-server"></i> Backend</h3>
+          <div class="badge-group">
+            <span class="badge">Node.js</span>
+            <span class="badge">Express</span>
+            <span class="badge">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-database"></i> Database</h3>
+          <div class="badge-group">
+            <span class="badge">MongoDB</span>
+            <span class="badge">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+          <div class="badge-group">
+            <span class="badge">Git</span>
+            <span class="badge">GitHub</span>
+            <span class="badge">Docker</span>
+            <span class="badge">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 4. What I Do -->
+    <section class="section-block">
+      <h2 class="section-heading centered">What I Do</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Responsive, fast, and scalable web applications built with modern frameworks and best practices.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3>Mobile Development</h3>
+          <p>Cross-platform mobile applications that offer seamless interaction and native performance.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+          <h3>Backend Development</h3>
+          <p>Secure REST APIs, robust server architectures, and efficient database designs.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Designing beautiful, user-centered interfaces with a focus on accessibility and clarity.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 5. Experience Timeline -->
+    <section class="section-block">
+      <h2 class="section-heading centered">Experience Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <h3>Started Software Engineering Journey</h3>
+          <p>Began self-directed learning, exploring computer science fundamentals and web basics.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <h3>Built Personal & Academic Projects</h3>
+          <p>Begun programming language classes and started writing actual Python code.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2026</span>
+          <h3>Refactory Apprentice</h3>
+          <p>Accelerating professional software craft, team collaboration, and industry-level engineering practices.</p>
+        </div>
+        <div class="timeline-item present">
+          <span class="timeline-year">Present</span>
+          <h3>Building Full Stack Applications</h3>
+          <p>Actively engineering web and mobile solutions to solve everyday operational challenges.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 6. My Values -->
+    <section class="section-block">
+      <h2 class="section-heading centered">Core Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Quality</h3>
+          <p>I write clean, readable, and maintainable code built for longevity.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3>Innovation</h3>
+          <p>I enjoy embracing modern technologies and applying creative solutions to complex problems.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Growth</h3>
+          <p>Dedicated to continuous learning and personal development every single day.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3>Teamwork</h3>
+          <p>I believe impactful software is created through clear communication and collaboration.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 7. Technologies Icon Grid -->
+    <section class="section-block">
+      <h2 class="section-heading centered">Technologies I Use</h2>
+      <div class="tech-icon-grid">
+        <div class="tech-box"><i class="fa-brands fa-react"></i><span>React</span></div>
+        <div class="tech-box"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+        <div class="tech-box"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+        <div class="tech-box"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+        <div class="tech-box"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+        <div class="tech-box"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+        <div class="tech-box"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+        <div class="tech-box"><i class="fa-solid fa-database"></i><span>MongoDB</span></div>
+        <div class="tech-box"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></div>
+        <div class="tech-box"><i class="fa-solid fa-server"></i><span>Express</span></div>
+        <div class="tech-box"><i class="fa-solid fa-wind"></i><span>Tailwind</span></div>
+        <div class="tech-box"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+        <div class="tech-box"><i class="fa-brands fa-vuejs"></i><span>Vue.js</span></div>
+        <div class="tech-box"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
+        <div class="tech-box"><i class="fa-brands fa-jenkins"></i><span>Jenkins</span></div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 8. Achievements -->
+    <section class="section-block">
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3 class="stat-number">3+</h3>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-number">10+</h3>
+          <p class="stat-label">Technologies Learned</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-number">500+</h3>
+          <p class="stat-label">Hours of Coding</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-number">100%</h3>
+          <p class="stat-label">Commitment</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 9. Focus, Goals & Fun Facts -->
+    <section class="info-triplet-grid">
+      <!-- Fun Facts -->
+      <div class="info-card">
+        <h3><i class="fa-solid fa-sparkles"></i> Fun Facts</h3>
+        <ul>
+          <li>☕ Love solving intricate logic challenges</li>
+          <li>📚 Constantly reading & learning new tech stack details</li>
+          <li>💡 Highly interested in AI & Mobile ecosystems</li>
+          <li>🌍 Open to global remote engineering opportunities</li>
+        </ul>
+      </div>
+
+      <!-- Current Focus -->
+      <div class="info-card">
+        <h3><i class="fa-solid fa-crosshair"></i> Current Focus</h3>
+        <ul>
+          <li>Advanced React Architecture</li>
+          <li>Node.js Microservices</li>
+          <li>Mobile App Engineering</li>
+          <li>System Design & Cybersecurity</li>
+          <li> Kotlin Programming</li>
+        </ul>
+      </div>
+
+      <!-- My Goals -->
+      <div class="info-card">
+        <h3><i class="fa-solid fa-bullseye"></i> My Goals</h3>
+        <p><strong>Short-Term:</strong> Become a high-performing full-stack developer producing production-ready software.</p>
+        <p><strong>Long-Term:</strong> Build high-impact applications used globally and contribute to innovative technical tools that empower communities.</p>
+      </div>
+    </section>
+
+    <!-- 10. Call To Action -->
+    <section class="cta-section" id="contact">
+      <h2>Interested in working together?</h2>
+      <p>Let's build something amazing.</p>
+      <a href="./contacts.html" class="btn btn-solid" target="_blank">Contact Me</a>
+    </section>
+
+  </div>
 
 </body>
 </html>
